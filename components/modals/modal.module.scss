@@ -1,0 +1,58 @@
+.fixed_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+  opacity: 0;
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  transform: scale(0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &.active {
+    transform: scale(1);
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  .close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+      i {
+        color: #df4957;
+      }
+    }
+
+    i {
+      font-size: 14px;
+      color: #76767a;
+    }
+  }
+}

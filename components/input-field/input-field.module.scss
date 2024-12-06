@@ -1,0 +1,23 @@
+.title {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.input {
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  border: 1px solid #c7c7c7;
+  padding: 8px;
+
+  &.error {
+    border: 1px solid #d50c15;
+  }
+}
+
+span {
+  &.error {
+    color: #d50c15;
+    font-size: 12px;
+    text-align: center;
+  }
+}

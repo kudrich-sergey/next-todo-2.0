@@ -1,0 +1,49 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 900;
+  pointer-events: none;
+  cursor: default;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  border-radius: 8px;
+  padding: 6px;
+  border: 1px solid #e3e5ef;
+  background-color: #fff;
+  z-index: 999;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.2s, transform 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px 12px;
+
+  i {
+    font-size: 16px;
+    color: #667085;
+  }
+
+  &:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(10px);
+  pointer-events: auto;
+  border: 1px solid #efefef;
+}

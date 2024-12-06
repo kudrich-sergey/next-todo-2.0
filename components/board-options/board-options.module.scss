@@ -1,0 +1,16 @@
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 6px;
+
+  i {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &:hover {
+    i {
+      color: darken(#fff, 10%);
+    }
+  }
+}

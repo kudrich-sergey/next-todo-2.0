@@ -1,0 +1,84 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String @id @default(cuid())
+  name        String?
+  email       String @unique
+  image       String?
+  password    String
+
+  boards      Board[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("user")
+}
+
+model Images {
+  id          String @id @default(cuid())
+  imageSmall  String
+  imageMedium String
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("image")
+}
+
+
+model Board {
+  id          String @id @default(cuid())
+  title       String
+  imageSmall  String?
+  imageMedium String?
+
+  userId      String @map("user_id")
+  user        User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lists       List[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("board")
+}
+
+model List {
+  id          String @id @default(uuid())
+  title       String
+  order       Int
+  color       String
+  background  String
+
+  boardId     String @map("board_id")
+  board       Board @relation(fields: [boardId], references: [id], onDelete: Cascade)
+
+  cards       Card[]
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("list")
+}
+
+model Card {
+  id              String @id @default(uuid())
+  title           String
+  order           Int
+  isCompleted     Boolean? @default(false) @map("is_completed")
+
+  listId          String @map("list_id")
+  list            List @relation(fields: [listId], references: [id], onDelete: Cascade)
+
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("card")
+}

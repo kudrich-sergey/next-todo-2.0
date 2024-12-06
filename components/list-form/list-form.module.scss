@@ -1,0 +1,74 @@
+.list_form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 272px;
+  height: 100%;
+  user-select: none;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.new_list {
+  width: 272px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 6px;
+  color: #667085;
+  font-size: 16px;
+  padding: 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    color: darken(#667085, 20%);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.create {
+  font-size: 15px;
+  color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #4f64bc;
+  margin-top: 16px;
+
+  &:hover {
+    background-color: #4357af;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    i {
+      color: #df4957;
+    }
+  }
+
+  i {
+    font-size: 11px;
+    color: #76767a;
+  }
+}

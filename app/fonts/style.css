@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('icons.eot?nes3oz');
+  src:  url('icons.eot?nes3oz#iefix') format('embedded-opentype'),
+    url('icons.ttf?nes3oz') format('truetype'),
+    url('icons.woff?nes3oz') format('woff'),
+    url('icons.svg?nes3oz#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-completed:before {
+  content: "\e902";
+}
+.ic-add:before {
+  content: "\e90a";
+}
+.ic-rename:before {
+  content: "\e90b";
+}
+.ic-close:before {
+  content: "\e90c";
+}
+.ic-duplicate:before {
+  content: "\e900";
+}
+.ic-remove:before {
+  content: "\e901";
+}
+.ic-dots:before {
+  content: "\e903";
+}
+.ic-email:before {
+  content: "\e904";
+}
+.ic-eye-slash:before {
+  content: "\e906";
+}
+.ic-password:before {
+  content: "\e907";
+}
+.ic-eye:before {
+  content: "\e905";
+}

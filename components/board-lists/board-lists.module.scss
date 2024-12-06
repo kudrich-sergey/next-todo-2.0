@@ -1,0 +1,59 @@
+.boards {
+  margin-top: 94px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 520px) {
+  .boards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .boards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .boards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1366px) {
+  .boards {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1600px) {
+  .boards {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.button {
+  width: 235px;
+  position: relative;
+  border-radius: 12px;
+  background-color: #e3e4e8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  transition: transform 0.15s ease-in-out;
+
+  &:hover {
+    transform: scale(0.97);
+  }
+}
+
+.button {
+  color: #fff;
+  font-size: 16px;
+  background-image: url("../../app/images/board.jpg");
+}

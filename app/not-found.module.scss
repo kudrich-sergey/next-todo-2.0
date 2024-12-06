@@ -1,0 +1,38 @@
+.container {
+  width: 600px;
+  height: 260px;
+  margin-top: 240px;
+  background-image: url("../app/images/404-page.png");
+}
+
+@media (max-width: 1366px) {
+  .container {
+    margin-top: 80px;
+  }
+}
+
+.title {
+  margin-top: 40px;
+  color: #434a54;
+  padding: 16px;
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+}
+
+.redirect {
+  width: 220px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background-color: #4f64bc;
+  margin-top: 30px;
+  padding: 12px;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #4357af;
+  }
+}

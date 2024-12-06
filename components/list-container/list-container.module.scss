@@ -1,0 +1,12 @@
+.lists {
+  display: flex;
+  column-gap: 24px;
+  margin-top: 70px;
+  padding: 0 20px;
+}
+
+.shrink {
+  display: flex;
+  flex-shrink: 0;
+  width: 1px;
+}

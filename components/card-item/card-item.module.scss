@@ -1,0 +1,68 @@
+.card {
+  position: relative;
+  min-height: 60px;
+  padding: 7px 20px 16px 30px;
+  outline: 1px solid transparent;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.05);
+
+  .icon {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    stroke: #667085;
+
+    &:hover {
+      stroke: darken(#667085, 20%);
+      fill: none;
+      cursor: pointer;
+
+      stroke: #0faf1b;
+      fill: #a6f578;
+    }
+  }
+
+  .completed {
+    stroke: #0faf1b;
+    fill: #a6f578;
+
+
+    &:hover {
+      stroke: #eb3737;
+      fill: #f7abab;
+      cursor: pointer;
+    }
+  }
+
+  &:hover {
+    outline-color: #cfd6e2;
+    cursor: pointer;
+  }
+
+  &:hover {
+    outline-color: #cfd6e2;
+    cursor: pointer;
+  }
+
+  .title {
+    text-decoration: line-through;
+  }
+
+  .date {
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    color: #667085;
+    font-size: 10px;
+  }
+}
+
+.textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
