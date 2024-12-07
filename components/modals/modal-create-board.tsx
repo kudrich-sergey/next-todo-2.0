@@ -73,9 +73,7 @@ export const ModalCreateBoard = ({ isOpen, onClose }: ModalCreateBoard) => {
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"
-                      //fill="none"
                       fill="#a6f578"
-                      //stroke="currentColor"
                       stroke="#0faf1b"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -84,20 +82,6 @@ export const ModalCreateBoard = ({ isOpen, onClose }: ModalCreateBoard) => {
                       <circle cx="12" cy="12" r="10" />
                       <path d="m9 12 2 2 4-4" />
                     </svg>
-                    {/*<svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="#30d158"
-                      stroke="#1d1d1d"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="m9 12 2 2 4-4" />
-                    </svg>*/}
                   </div>
                 )}
               </div>
